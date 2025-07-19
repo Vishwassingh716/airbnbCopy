@@ -1,0 +1,35 @@
+/* Import Leaflet CSS */
+@import "leaflet/dist/leaflet.css";
+
+/* Set the map dimensions */
+.leaflet-container {
+  height: 100vh;
+  width: 100%;
+}
+
+/* Marker styling */
+.leaflet-marker-icon {
+  border: 2px solid #0078ff;
+  border-radius: 50%;
+  transform: scale(1.2); /* Slightly enlarge markers */
+}
+
+/* Hide the attribution for a cleaner map */
+.leaflet-control-attribution {
+  display: none;
+}
+
+
+.slick-prev::before,
+.slick-next::before {
+  color: #e6e2e8;
+  font-size: 28px;
+}
+
+.slick-dots li button:before {
+  color: grey;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #4B0082;
+}
