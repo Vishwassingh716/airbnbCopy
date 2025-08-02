@@ -132,8 +132,8 @@ const sliderSettings = {
     uploadData.append("name", formData.name);
     uploadData.append("phone_number", formData.phone_number);
     uploadData.append("description", formData.description);
-    uploadData.append("address", formData.city);
-    uploadData.append("address", formData.country);
+    uploadData.append("city", formData.city);
+    uploadData.append("country", formData.country);
 
     uploadData.append("img", image);
     try {

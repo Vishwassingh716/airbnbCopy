@@ -27,5 +27,7 @@ urlpatterns = [
     path('favhousedelete/<int:pk>/<int:hk>', FavoriteDeleteView.as_view(), name = 'unlike'),
     path('homebookings/<str:pk>', BookingCreateView.as_view(), name='create-booking'),
     path('payment-verify/', RazorpayVerifyPaymentView.as_view(), name='verify-payment'),
+
+    path('change-password/', PasswordChangeView.as_view(), name='change-password'),
     
 ]
