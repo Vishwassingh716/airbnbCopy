@@ -1,3 +1,5 @@
+--global-option=build_ext
+--global-option="-I/usr/include/gdal"
 asgiref==3.8.1
 beautifulsoup4==4.12.3
 blinker==1.9.0
