@@ -223,9 +223,17 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 
-GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal309.dll"
-GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
+# GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal309.dll"
+# GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
 
+
+
+if os.name == 'nt':  # Windows
+    GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal309.dll"
+    GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
+else:  # Linux (Render, production)
+    GDAL_LIBRARY_PATH = os.getenv("GDAL_LIBRARY_PATH")
+    GEOS_LIBRARY_PATH = os.getenv("GEOS_LIBRARY_PATH")
 
 
 
