@@ -14,7 +14,9 @@ djangorestframework-gis==1.1
 djangorestframework-simplejwt==5.3.1
 docopt==0.6.2
 Flask==3.1.0
-GDAL @ file:///C:/Users/VISHWAS/Downloads/GDAL-3.6.1-cp310-cp310-win_amd64.whl#sha256=30340137fea7c080f294ea0b93770a892e7b1c68ae5f9c8a87b6b59c78eff0c9
+# GDAL @ file:///C:/Users/VISHWAS/Downloads/GDAL-3.6.1-cp310-cp310-win_amd64.whl#sha256=30340137fea7c080f294ea0b93770a892e7b1c68ae5f9c8a87b6b59c78eff0c9
+
+gdal==3.6.1
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.4
