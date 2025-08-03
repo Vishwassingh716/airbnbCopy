@@ -16,6 +16,10 @@ from pathlib import Path
 
 from decouple import config
 
+
+
+import platform
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -228,10 +232,10 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 
 
 
-if os.name == 'nt':  # Windows
+if platform.system() == 'Windows':
     GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal309.dll"
     GEOS_LIBRARY_PATH = r"C:\OSGeo4W\bin\geos_c.dll"
-else:  # Linux (Render, production)
+else:
     GDAL_LIBRARY_PATH = os.getenv("GDAL_LIBRARY_PATH")
     GEOS_LIBRARY_PATH = os.getenv("GEOS_LIBRARY_PATH")
 
